@@ -249,7 +249,7 @@ class WiFiSecurityGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("🛡️ WiFi Network Security Analyzer")
-        self.root.geometry("1400x900")
+        self.root.geometry("1500x950")
         self.root.configure(bg="#0a0e27")
         
         self.setup_styles()
@@ -311,7 +311,7 @@ class WiFiSecurityGUI:
             fg="#00ff41",
             font=('Courier', 9),
             width=42,
-            height=28,
+            height=30,
             selectmode='single'
         )
         self.network_listbox.pack(side='left', fill='both', expand=True, padx=3)
@@ -345,19 +345,19 @@ class WiFiSecurityGUI:
             bg="#1a1f3a",
             fg="#00ff41",
             font=('Courier', 9),
-            height=20,
+            height=18,
             width=95
         )
         self.hash_display.pack(fill='both', expand=True)
         
-        # Button frame
+        # Button frame - FIXED POSITION
         button_frame = ttk.Frame(self.root)
-        button_frame.pack(fill='x', padx=15, pady=10)
+        button_frame.pack(fill='x', padx=15, pady=10, side='bottom')
         
-        self.generate_btn = ttk.Button(button_frame, text="⚡ GENERATE HASH", command=self.generate_hash, width=20)
+        self.generate_btn = ttk.Button(button_frame, text="⚡ GENERATE HASH", command=self.generate_hash, width=25)
         self.generate_btn.pack(side='left', padx=5)
         
-        self.export_btn = ttk.Button(button_frame, text="💾 Export Report", command=self.export_report, width=20)
+        self.export_btn = ttk.Button(button_frame, text="💾 Export Report", command=self.export_report, width=25)
         self.export_btn.pack(side='left', padx=5)
     
     def scan_networks(self):
