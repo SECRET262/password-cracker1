@@ -1,0 +1,6 @@
+# No external dependencies required - uses only Python standard library
+# This project uses: time, hashlib, itertools, sys
+
+# For optional enhancements:
+# tqdm - for progress bars
+# requests - for downloading wordlists online
